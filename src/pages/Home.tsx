@@ -2,7 +2,6 @@ import React from 'react';
 import 'styles/home.scss';
 import Documents from "../components/Documents";
 import {Button, Empty} from "antd";
-import FileDrop from "../components/FileDrop/FileDrop";
 import {EllipsisOutlined} from "@ant-design/icons";
 
 const Home = () => {

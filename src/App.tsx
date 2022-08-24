@@ -13,7 +13,6 @@ import Chat from "./containers/Chat";
 import HomeMui from "./pages/HomeMui";
 import MainLayout from "./containers/MainLayout";
 import Documents from "./containers/Documents";
-import Auth from "./pages/Auth";
 
 
 function App() {
@@ -29,7 +28,6 @@ function App() {
                         </ProtectedRoute>
                     }/>
                     <Route path="login" element={<Login setUser={setUser}/>}/>
-                    {/*<Route path="auth" element={<Auth/>}/>*/}
                     <Route path="mui" element={
                         <ProtectedRoute user={user}>
                             <HomeMui/>

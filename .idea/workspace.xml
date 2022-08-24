@@ -2,31 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e8c0aee-61ce-4d5a-b8aa-a9d7c40b292b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Sign.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/ConfirmDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/Loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Chat.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/Documents.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MainLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/EUSignCPCore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/EUSignCPFrontend.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/eusw.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/eusw.umd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/euswll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DocumentsMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DocumentsMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/IconButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/IconButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/Navbar/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomeMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomeMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileDrop/FileDrop.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileDrop/FileDrop.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sign.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Chat.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Auth.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,20 +34,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/MyProjects/doc_exchange",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "E:\\MyProjects\\doc_exchange\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/MyProjects/doc_exchange&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;E:\\MyProjects\\doc_exchange\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MDUser\WebstormProjects\md-xdoc3\src\styles" />
@@ -95,6 +81,7 @@
       <updated>1660223465273</updated>
       <workItem from="1660223466668" duration="81925000" />
       <workItem from="1661322910045" duration="13959000" />
+      <workItem from="1661346117313" duration="774000" />
     </task>
     <servers />
   </component>

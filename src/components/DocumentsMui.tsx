@@ -249,7 +249,7 @@ function CustomToolbar() {
                     <Button className="ml-2" type="light" onClick={() => setModalOpen2(true)} icon="icon-eye">
                         Превью
                     </Button>
-                    {/*<IconButton icon={<DotsHorizontalIcon/>}/>*/}
+                    {/*<IconButton type='danger' icon='icon-trash' title='Видалити'/>*/}
                 </div>
                 <div className='d-flex ml-auto align-items-center'>
                     <TableQuickSort/>
@@ -574,6 +574,7 @@ export default function FullFeaturedDemo() {
             disableExport: true,
             renderHeader: () => <></>,
             renderCell: (params: GridRenderCellParams) => {
+                // eslint-disable-next-line react-hooks/rules-of-hooks
                 const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
                 const open = Boolean(anchorEl);
                 const handleClick = (event: React.MouseEvent<HTMLElement>) => {

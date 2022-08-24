@@ -33,7 +33,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -60,7 +60,7 @@ const Documents = () => {
 
                             <div className="ml-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face1.jpg"
+                                    <img src="https://i.pravatar.cc/150/"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -69,7 +69,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -95,7 +95,7 @@ const Documents = () => {
 
                             <div className="ml-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face1.jpg"
+                                    <img src="https://i.pravatar.cc/150/"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -106,7 +106,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -124,7 +124,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -150,7 +150,7 @@ const Documents = () => {
 
                             <div className="ml-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face1.jpg"
+                                    <img src="https://i.pravatar.cc/150/"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -161,7 +161,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -188,7 +188,7 @@ const Documents = () => {
 
                             <div className="ml-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face1.jpg"
+                                    <img src="https://i.pravatar.cc/150/"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
@@ -197,7 +197,7 @@ const Documents = () => {
                         <li className="media">
                             <div className="mr-3">
                                 <a href="../../../../global_assets/images/demo/images/3.png">
-                                    <img src="../../../../global_assets/images/demo/users/face11.jpg"
+                                    <img src="https://www.mdoffice.com.ua/images/og_image.jpg"
                                          className="rounded-circle" width="40" height="40" alt=""/>
                                 </a>
                             </div>
