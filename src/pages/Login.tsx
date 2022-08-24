@@ -12,7 +12,7 @@ const Login: React.FC<LoginProps> = ({setUser}) => {
         setUser({
             username: 'John Doe',
         })
-        navigate('/mui');
+        navigate('/main');
     }
 
     return (

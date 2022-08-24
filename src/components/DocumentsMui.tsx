@@ -4,7 +4,7 @@ import {
     DataGrid,
     GRID_CHECKBOX_SELECTION_FIELD, GridColDef,
     gridPageCountSelector,
-    gridPageSelector, GridRowsProp,
+    gridPageSelector, GridRenderCellParams, GridRowsProp,
     GridToolbar,
     GridToolbarColumnsButton,
     GridToolbarContainer,
@@ -25,7 +25,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import Pagination from '@mui/material/Pagination';
-import {PaginationItem} from "@mui/material";
+import {alpha, Divider, Menu, MenuProps, PaginationItem} from "@mui/material";
 import Input from "./ui/Input";
 import TableQuickSort from "./TableQuickSort";
 import DensitySelector from "./DensitySelector";
@@ -33,7 +33,9 @@ import {useNavigate} from "react-router-dom";
 import Modal from "./ui/Modal";
 import Typography from "@mui/material/Typography";
 import IconButton from "./ui/IconButton";
+import Icon from "./ui/Icon";
 import {DotsHorizontalIcon} from '@heroicons/react/solid'
+import {data} from "browserslist";
 
 const AntDesignStyledDataGrid = styled(DataGrid)(({theme}) => ({
     border: `1px solid ${theme.palette.mode === 'light' ? '#f0f0f0' : '#303030'}`,
@@ -169,6 +171,7 @@ const StyledBox = styled(Box)(({theme}) => ({
     },
 }));
 
+
 type GridDataType = 'Employee' | 'Commodity';
 type GridDataThemeOption = 'default' | 'ant';
 
@@ -240,15 +243,13 @@ function CustomToolbar() {
                     <Button className="ml-4" type="light" onClick={() => ({})} icon="icon-download4">
                         Скачати
                     </Button>
-                    <Button className="ml-2" type="light" onClick={() => navigate('/123')}>
+                    <Button className="ml-2" type="light" onClick={() => navigate('123')} icon="icon-bubble9">
                         Питання до підтримки
                     </Button>
-                    <Button className="ml-2" type="light" onClick={() => setModalOpen2(true)} icon="">
-                        Передперегляд
+                    <Button className="ml-2" type="light" onClick={() => setModalOpen2(true)} icon="icon-eye">
+                        Превью
                     </Button>
-                    <IconButton icon={<DotsHorizontalIcon/>}/>
-                    {/*<Button className="ml-2" type="light" onClick={() => ({})} icon="icon-more2"/>*/}
-                    {/*<GridToolbarExport className='ButtonUnstyled-root btn btn-light ml-2'/>*/}
+                    {/*<IconButton icon={<DotsHorizontalIcon/>}/>*/}
                 </div>
                 <div className='d-flex ml-auto align-items-center'>
                     <TableQuickSort/>
@@ -290,6 +291,7 @@ export default function FullFeaturedDemo() {
         maxColumns: 40,
         editable: false,
     });
+    const navigate = useNavigate();
 
     const [pagination, setPagination] = React.useState<GridPaginationSettings>({
         pagination: false,
@@ -344,89 +346,12 @@ export default function FullFeaturedDemo() {
     };
 
     // const DataGridComponent = isAntDesign ? AntDesignStyledDataGrid : DataGrid;
-    const myData = {
-        'columms': [
-            {'field': 'id', 'hide': true},
-            {'field': 'document', 'headerName': 'Document Name'},
-            {'field': 'type', 'headerName': 'Type'},
-            {'field': 'size', 'headerName': 'Size'},
-            {'field': 'date', 'headerName': 'Date'},
-        ],
-        'initialState':
-            {
-                'columms':
-                    {
-                        'columnVisibilityModel':
-                            {
-                                'id': false
-                            }
-                    }
-            },
-        'rows': [
-            {
-                'id': '2a1b0782-d5a1-5da2-99e6-5c9ec03c7853',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '1910d01b-d1ea-5933-90fc-5af2e02b3eeb',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '3',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '4',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '5',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '6',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '7',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            },
-            {
-                'id': '8',
-                'document': 'CCD_450.imfx',
-                'type': 'Рідний формат',
-                'size': '1735',
-                'date': '1661240873938'
-            }
-        ]
-    }
 
     const rows: GridRowsProp = [
         {
             id: 1,
             document: 'MDUA806020_001667.zmdx',
-            type: <a href="#">Рідний формат</a>,
+            type: 'Рідний формат',
             comment: 'Графа 14 : № дозволу митного брокера не зайдений в базі даних миниці.',
             size: '1735',
             date: '29-06-2022'
@@ -522,7 +447,7 @@ export default function FullFeaturedDemo() {
 
     ];
 
-    const StyledGridOverlay = styled('div')(({ theme }) => ({
+    const StyledGridOverlay = styled('div')(({theme}) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -583,31 +508,124 @@ export default function FullFeaturedDemo() {
                             d="M149.121 33.292l-6.83 2.65a1 1 0 0 1-1.317-1.23l1.937-6.207c-2.589-2.944-4.109-6.534-4.109-10.408C138.802 8.102 148.92 0 161.402 0 173.881 0 184 8.102 184 18.097c0 9.995-10.118 18.097-22.599 18.097-4.528 0-8.744-1.066-12.28-2.902z"
                         />
                         <g className="ant-empty-img-4" transform="translate(149.65 15.383)">
-                            <ellipse cx="20.654" cy="3.167" rx="2.849" ry="2.815" />
-                            <path d="M5.698 5.63H0L2.898.704zM9.259.704h4.985V5.63H9.259z" />
+                            <ellipse cx="20.654" cy="3.167" rx="2.849" ry="2.815"/>
+                            <path d="M5.698 5.63H0L2.898.704zM9.259.704h4.985V5.63H9.259z"/>
                         </g>
                     </g>
                 </svg>
-                <Box sx={{ mt: 1 }}>Файли поки відсутні..</Box>
+                <Box sx={{mt: 1}}>Файли поки відсутні..</Box>
             </StyledGridOverlay>
         );
     }
 
+    const StyledMenu = styled((props: MenuProps) => (
+        <Menu
+            elevation={0}
+            anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right',
+            }}
+            transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+            }}
+            {...props}
+        />
+    ))(({ theme }) => ({
+        '& .MuiPaper-root': {
+            borderRadius: 6,
+            marginTop: theme.spacing(1),
+            minWidth: 180,
+            color:
+                theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+            boxShadow:
+                'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+            '& .MuiMenu-list': {
+                padding: '4px 0',
+            },
+            '& .MuiMenuItem-root': {
+                '& .MuiSvgIcon-root': {
+                    fontSize: 18,
+                    color: theme.palette.text.secondary,
+                    marginRight: theme.spacing(1.5),
+                },
+                '&:active': {
+                    backgroundColor: alpha(
+                        theme.palette.primary.main,
+                        theme.palette.action.selectedOpacity,
+                    ),
+                },
+            },
+        },
+    }));
+
     const columns: GridColDef[] = [
-        {field: 'document', headerName: 'Назва файлу', width: 350},
+        {field: 'document', headerName: 'Назва файлу', width: 250},
         {field: 'type', headerName: 'Формат', width: 150},
         {field: 'size', headerName: 'Розмір', width: 150},
         {field: 'date', headerName: 'Дата', width: 150},
-        {field: 'comment', headerName: 'Примітка', width: 350},
-    ];
+        {field: 'comment', headerName: 'Примітка', flex: 1},
+        {
+            field: "actions",
+            align: "right",
+            headerName: 'Дії',
+            hideable: false,
+            sortable: false,
+            disableExport: true,
+            renderHeader: () => <></>,
+            renderCell: (params: GridRenderCellParams) => {
+                const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+                const open = Boolean(anchorEl);
+                const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+                    setAnchorEl(event.currentTarget);
+                };
+                const handleClose = () => {
+                    setAnchorEl(null);
+                };
 
-    console.log(data)
+                return (
+                    <div className='d-flex justify-content-end'>
+                        {/*<IconButton icon='icon-bubble9' title="Переписка" onClick={(e) => {*/}
+                        {/*    e.stopPropagation();*/}
+                        {/*    navigate('123')*/}
+                        {/*}}/>*/}
+                        {/*<IconButton icon='icon-trash' type='danger' title="Видалити" onClick={(e) => {*/}
+                        {/*    e.stopPropagation()*/}
+                        {/*}}/>*/}
+                        <IconButton icon={<DotsHorizontalIcon/>} onClick={(e) => {e.stopPropagation(); handleClick(e)}}/>
+                        <StyledMenu
+                            id="demo-customized-menu"
+                            MenuListProps={{
+                                'aria-labelledby': 'demo-customized-button',
+                            }}
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose} disableRipple>
+                                <Icon classNames='text-secondary mr-2' type='icon-download4'/>
+                                Скачати файл
+                            </MenuItem>
+                            <MenuItem onClick={() => {handleClose(); navigate('123')}} disableRipple>
+                                <Icon classNames='text-secondary mr-2' type='icon-bubbles2'/>
+                                Переписка
+                            </MenuItem>
+                            <MenuItem onClick={handleClose} disableRipple>
+                                <Icon classNames='text-danger mr-2' type='icon-trash'/>
+                                <span className='text-danger'>Видалити</span>
+                            </MenuItem>
+                        </StyledMenu>
+                    </div>
+                )
+            },
+        },
+    ];
 
     return (
         <AntDesignStyledDataGrid
-            // rows={rows}
-            // columns={columns}
-            {...data}
+            rows={rows}
+            columns={columns}
+            //{...data}
             components={{
                 Toolbar: CustomToolbar,
                 Pagination: CustomPagination,

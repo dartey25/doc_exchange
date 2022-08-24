@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 interface ButtonProps{
     onClick: () => void;
-    type?: string;
+    type?: 'primary' | 'secondary' | 'danger' | 'warning' | 'info' | 'success' | 'light';
     className?: string;
     children?: any;
     icon?: any;

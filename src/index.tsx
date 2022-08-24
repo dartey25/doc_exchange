@@ -11,6 +11,10 @@ const myTheme = createTheme({
             MuiDataGrid: {
                 styleOverrides: {
                     row: {
+                        "&:hover": {
+                            backgroundColor: "white",
+                            cursor: 'pointer'
+                        },
                         "&.Mui-selected": {
                             backgroundColor: "#eaf5ea",
                             "&:hover": {

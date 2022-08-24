@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
         <div className="navbar navbar-dark navbar-expand-md" data-service="gda">
             <div className="navbar-brand"><a href="/ua/gda.home.html" className="d-inline-block"
                                              aria-label="Go home"><img src="/images/bar_logo.png" alt=""/></a></div>
-            <div className="navbar-text wmin-200 py-1"><a href="/ua/gda.home.html" className="d-inline-block">MD ЗДП</a>
+            <div className="navbar-text wmin-200 py-1"><a href="/ua/gda.home.html" className="d-inline-block">MD Document Exchange</a>
                 <div className="text-grey-300 font-size-xs">v. 1.0.3 вiд 10.08.2022</div>
             </div>
             <div className="d-md-none">

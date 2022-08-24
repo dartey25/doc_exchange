@@ -5,17 +5,19 @@ interface IconButtonProps {
     icon: string | ReactElement;
     id?: string;
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    type?: 'primary' | 'secondary';
+    type?: 'primary' | 'secondary' | 'danger' | 'warning' | 'info' | 'success';
     marginLeft?: number;
+    title?: string;
     other?: any;
 }
 
-const IconButton: React.FC<IconButtonProps> = ({icon, type = 'secondary', id, onClick, marginLeft = 2, other}) => {
+const IconButton: React.FC<IconButtonProps> = ({icon, type = 'secondary', id, onClick, marginLeft = 2, title, other}) => {
     return (
         <ButtonUnstyled
             id={id}
             onClick={onClick}
             componentsProps={{root: {className: `btn btn-${type}-100 text-${type} btn-icon ml-${marginLeft}`}}}
+            title={title}
             {...other}
         >
             {

@@ -101,67 +101,16 @@ const HomeMui = () => {
                                     </div>
                             </div>
 
-                            <h6 className="font-weight-semibold mb-0">Hanna Dorman</h6>
-                            <span className="d-block text-muted">UX/UI designer</span>
-
-                            <div className="list-icons list-icons-extended mt-3">
-                                <a href="#" className="list-icons-item" data-popup="tooltip" title=""
-                                   data-original-title="Google Drive"><i className="icon-google-drive"></i></a>
-                                <a href="#" className="list-icons-item" data-popup="tooltip" title=""
-                                   data-original-title="Twitter"><i className="icon-twitter"></i></a>
-                                <a href="#" className="list-icons-item" data-popup="tooltip" title=""
-                                   data-original-title="Github"><i className="icon-github"></i></a>
-                            </div>
+                            <h6 className="font-weight-semibold mb-0">Муравйов Станіслав Андрійович</h6>
+                            <span className="d-block text-muted">ТОВ "Білгрем"</span>
                         </div>
                     </div>
-                    <div className="sidebar-section mb-3">
-                        <div className="sidebar-section-header">
-                            <h6 className="mb-0">Navigation</h6>
-                        </div>
+                    <div className="sidebar-section mb-3 mt-3">
 
                         <div className="collapse show" id="sidebar-navigation">
-                            <ul className="nav nav-sidebar">
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-user"></i>
-                                        My profile
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-cash3"></i>
-                                        Balance
-                                        <span
-                                            className="text-muted font-size-sm font-weight-normal ml-auto">$1,430</span>
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-tree7"></i>
-                                        Connections
-                                        <span className="badge badge-danger badge-pill ml-auto">29</span>
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-users"></i>
-                                        Friends
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-calendar3"></i>
-                                        Events
-                                        <span className="badge badge-teal badge-pill ml-auto">48</span>
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a href="#" className="nav-link">
-                                        <i className="icon-cog3"></i>
-                                        Account settings
-                                    </a>
-                                </li>
-                            </ul>
+                            <p className="list-group-item"><span className="text-muted mr-1">ДРФО:</span> 3382302739</p>
+                            <p className="list-group-item"><span className="text-muted mr-1">ЕГРПОУ:</span> 3382302739</p>
+                            <p className="list-group-item"><span className="text-muted mr-1">Наш клієнт:</span> <span className='text-danger'>ні</span></p>
                         </div>
                     </div>
 

@@ -9,34 +9,50 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Error from "./pages/Error";
 import ProtectedRoute from "./containers/ProtectedRoute";
-import Chat from "./pages/Chat";
+import Chat from "./containers/Chat";
 import HomeMui from "./pages/HomeMui";
+import MainLayout from "./containers/MainLayout";
+import Documents from "./containers/Documents";
+import Auth from "./pages/Auth";
 
 
 function App() {
     //
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({username: 'sfsfsf', password: ''});
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" /*component={Home}*/ element={<BaseLayout/>}>
                     <Route index element={
-                    <ProtectedRoute user={user}>
-                        <Home/>
-                    </ProtectedRoute>
+                        <ProtectedRoute user={user}>
+                            <Home/>
+                        </ProtectedRoute>
                     }/>
                     <Route path="login" element={<Login setUser={setUser}/>}/>
+                    {/*<Route path="auth" element={<Auth/>}/>*/}
                     <Route path="mui" element={
                         <ProtectedRoute user={user}>
                             <HomeMui/>
                         </ProtectedRoute>
                     }/>
-                    <Route path="/:documentId" element={<Chat/>}/>
+                    <Route path="main" element={<MainLayout/>}>
+                        <Route index element={
+                            <ProtectedRoute user={user}>
+                                <Documents/>
+                            </ProtectedRoute>
+                        }/>
+                        <Route path=":id" element={
+                            <ProtectedRoute user={user}>
+                                <Chat/>
+                            </ProtectedRoute>
+                        }/>
+                    </Route>
+                    <Route path="mui/:documentId" element={<Chat/>}/>
                     <Route path="*" element={<Error/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
-);
+    );
 }
 
 export default App;
