@@ -1,19 +1,60 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import {createTheme, ThemeProvider} from "@mui/material";
+import { ukUA } from '@mui/material/locale';
+
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const myTheme = createTheme({
+        components: {
+            //@ts-ignore - this isn't in the TS because DataGird is not exported from `@mui/material`
+            MuiDataGrid: {
+                styleOverrides: {
+                    row: {
+                        "&.Mui-selected": {
+                            backgroundColor: "#eaf5ea",
+                            "&:hover": {
+                                backgroundColor: "#eaf5ea"
+                            }
+                        }
+                    }
+                }
+            },
+            MuiButtonBase: {
+                defaultProps: {
+                    // The props to change the default for.
+                    disableRipple: true, // No more ripple, on the whole application ?!
+                },
+            },
+        },
+        palette: {
+            primary: {
+                light: '#519dd9',
+                dark: '#234161',
+                main: '#2196f3'
+            }
+        }
+    },
+    ukUA
+);
+// const theme = createTheme(
+//     {
+//         palette: {
+//             primary: {main: '#1976d2'},
+//         },
+//     },
+//     coreukUA,
+//     ukUA
+// );
+
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+    document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ThemeProvider theme={myTheme}>
+        <App/>
+    </ThemeProvider>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export {};

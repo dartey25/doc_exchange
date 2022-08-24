@@ -1,0 +1,36 @@
+.sidebar{
+  padding: 10px;
+  width: 15%!important;
+  &__content{
+    overflow: auto;
+    height: 100%;
+  }
+
+}
+
+.home{
+  height: calc(100% - 52px);
+}
+
+.documents{
+  display: flex;
+  flex-direction: column;
+
+  &__header{
+    flex: 0 1 auto;
+  }
+  &__table{
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+}
+
+.MuiDataGrid-cell:focus, .MuiDataGrid-cell:focus-within, .MuiDataGrid-cellCheckbox:focus, .MuiDataGrid-columnHeader:focus, .MuiDataGrid-columnHeader:focus-within {
+  outline: none!important;
+}
+
+.sidebar{
+  border-right: none;
+}
+
+

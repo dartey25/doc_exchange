@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/components/DocumentsMui.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/TableQuickSort.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/ui/Modal.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/components/ui/Navbar/Navbar.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/pages/Home.tsx" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/pages/HomeMui.tsx" charset="UTF-8" />
+  </component>
+</project>
