@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e8c0aee-61ce-4d5a-b8aa-a9d7c40b292b" name="Changes" comment="">
+    <list default="true" id="4e8c0aee-61ce-4d5a-b8aa-a9d7c40b292b" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DocumentsMui.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DocumentsMui.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileDrop/FileDrop.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/FileDrop/FileDrop.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sign.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SignForm.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Chat.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Chat.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Auth.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +72,17 @@
       <updated>1660223465273</updated>
       <workItem from="1660223466668" duration="81925000" />
       <workItem from="1661322910045" duration="13959000" />
-      <workItem from="1661346117313" duration="774000" />
+      <workItem from="1661346117313" duration="1838000" />
+      <workItem from="1661348429642" duration="796000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1661346973832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661346973832</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +98,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
