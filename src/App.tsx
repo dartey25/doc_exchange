@@ -21,7 +21,7 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" /*component={Home}*/ element={<BaseLayout/>}>
+                <Route path="/doc_exchange" /*component={Home}*/ element={<BaseLayout/>}>
                     <Route index element={
                         <ProtectedRoute user={user}>
                             <Home/>
